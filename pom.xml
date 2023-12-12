@@ -51,6 +51,16 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Add the Maven WAR Plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.0</version> <!-- Use the latest version -->
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
