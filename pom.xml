@@ -3,51 +3,48 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
- 	   <groupId>org.springframework.boot</groupId>
- 	   <artifactId>spring-boot-starter-parent</artifactId>
- 	   <version>2.1.3.RELEASE</version>
- 	   <relativePath/> <!-- lookup parent from repository -->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>io.buildpacks.example</groupId>
     <artifactId>sample</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>sample</name>
     <description>Sample Java Application</description>
 
     <properties>
- 	   <java.version>1.8</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
- 	   <dependency>
- 		   <groupId>org.springframework.boot</groupId>
- 		   <artifactId>spring-boot-starter-thymeleaf</artifactId>
- 	   </dependency>
- 	   <dependency>
- 		   <groupId>org.springframework.boot</groupId>
- 		   <artifactId>spring-boot-starter-web</artifactId>
- 	   </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
- 	   <dependency>
- 		   <groupId>org.springframework.boot</groupId>
- 		   <artifactId>spring-boot-starter-test</artifactId>
- 		   <scope>test</scope>
- 	   </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
- 	   <plugins>
- 		   <plugin>
- 			   <groupId>org.springframework.boot</groupId>
- 			   <artifactId>spring-boot-maven-plugin</artifactId>
- 			   <executions>
- 				   <execution>
- 					   <goals>
- 						   <goal>repackage</goal>
- 					   </goals>
- 				   </execution>
- 			   </executions>
- 		   </plugin>
- 	   </plugins>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>sample</finalName>
+                    <packaging>war</packaging>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
